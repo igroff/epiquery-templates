@@ -1,0 +1,1 @@
+select "one" as one_col, "two" as two_col

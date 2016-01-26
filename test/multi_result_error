@@ -1,0 +1,2 @@
+select 'One' as [One Column];
+select super from pants
