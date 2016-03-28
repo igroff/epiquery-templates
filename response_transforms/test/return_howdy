@@ -1,4 +1,4 @@
 // vim:ft=javascript
 module.exports = function(o){
-  return {"Howdy": "Pardner"};
+  return {"Howdy": "Monkey Pants smell like banannas" };
 }
