@@ -1,0 +1,40 @@
+#! /usr/bin/env bash
+# vim:ft=sh
+for file in $(find . -type f)
+do
+  if echo "${file}" | grep "${BASH_SOURCE[0]}" > /dev/null 2>&1; then
+    # skip myself
+    continue
+  fi
+
+  if echo "${file}" | grep \.git > /dev/null 2>&1; then
+    # don't touch anything managed by git
+    #echo skipping git stuff ${file}
+    continue
+  fi
+  
+  if echo "${file}" | grep \.js$ > /dev/null 2>&1; then
+    # we don't touch .js files
+    #echo skipping js file ${file}
+    continue
+  fi
+
+  if echo "${file}" | grep \.swp$ > /dev/null 2>&1; then
+    # we don't touch .swp files
+    continue
+  fi
+
+  if echo "${file}" | grep \.md$ > /dev/null 2>&1; then
+    # skip *.md files
+    continue
+  fi
+
+  if echo "$file" | grep mysql > /dev/null 2>&1; then
+    echo "#acl: *" | cat - ${file} > ${file}.acl
+    mv ${file}.acl ${file}
+  else
+    echo "--acl: *" | cat - ${file} > ${file}.acl
+    mv ${file}.acl ${file}
+  fi
+done
+
