@@ -7,6 +7,11 @@ do
     continue
   fi
 
+  if echo "${file}" | grep response_transforms > /dev/null 2>&1; then
+    # response transforms are not query templates
+    continue
+  fi
+
   if echo "${file}" | grep \.git > /dev/null 2>&1; then
     # don't touch anything managed by git
     #echo skipping git stuff ${file}
