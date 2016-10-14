@@ -1,3 +1,7 @@
+/*
+executionMasks:
+  a_valid_bitmask: 1
+*/
 Declare @start int, @end int
 Select @start=1, @end=1000
  

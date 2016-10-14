@@ -1,3 +1,7 @@
+/*
+executionMasks:
+  a_valid_bitmask: 1
+*/
 use tempdb;
 if exists (select 1 from sysobjects where name ='__epiquery_test_table' and type ='u') 
 begin

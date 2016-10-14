@@ -1,3 +1,7 @@
+/*
+executionMasks:
+  a_valid_bitmask: 1
+*/
 --acl: igroff
 declare @test_table TABLE
 (

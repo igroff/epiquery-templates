@@ -1,3 +1,7 @@
+/*
+executionMasks:
+  a_valid_bitmask: 1
+*/
 create table if not exists epiquery.test_table(
   id int,
   name varchar(25)

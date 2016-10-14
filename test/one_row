@@ -1,3 +1,7 @@
+/*
+executionMasks:
+  a_valid_bitmask: 1
+*/
 declare @test_table TABLE
 (
   id int,

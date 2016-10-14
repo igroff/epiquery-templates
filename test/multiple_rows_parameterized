@@ -1,3 +1,7 @@
+/*
+executionMasks:
+  a_valid_bitmask: 1
+*/
 declare @sql nvarchar(max)
 
 set @sql='
